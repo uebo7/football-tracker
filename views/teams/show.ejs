@@ -2,6 +2,22 @@
 <html>
     <%- include('../partials/head') %> 
 <body>
-    
+    <nav>
+        <a href="/teams">Back to Teams</a>
+        <a href="/teams/<%=team.id%>/edit">Edit Team</a>
+        <form action="/teams/<%=team.id%>?_method=DELETE" method="post">
+            <input type="submit" value="DELETE TEAM">
+        </form>
+    </nav>
+    <h1><%=team.name%></h1>
+    <div>
+        <p>Record: <%=team.record%></p>
+        <p>Conference: <%=team.conference%></p>
+        <p>Division: <%=team.division%></p>
+        <p><%-team.playoffs ? 'In Playoffs' : 'Out Of Playoffs'%></p>
+    </div>
+    <div>
+        <img src="<%=team.img%>" alt="<%=team.name%>">
+    </div>
 </body>
 </html>

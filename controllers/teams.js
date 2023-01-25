@@ -1,5 +1,4 @@
 const express = require('express')
-const { appendFile } = require('fs')
 const router = express.Router()
 const Team = require('../models/team')
 
@@ -39,7 +38,7 @@ router.put('/teams/:id', function(req, res) {
             new: true,
         },
         function(error, updatedTeam) {
-            res.redirect(`${req.params}`)
+            res.redirect(`${req.params.id}`)
         })
 })
 

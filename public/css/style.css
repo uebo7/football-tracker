@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* index*/
+
+h1 {
+    text-align: center;
+    margin: 40px;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+a {
+    font-size: 40px;
+    color: black;
+    height: 23px;
+    width: 500px;
+    text-transform: capitalize;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    box-sizing: border-box;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 30px;
+}
+
