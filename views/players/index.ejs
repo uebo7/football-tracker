@@ -2,6 +2,18 @@
 <html>
     <%- include('../partials/head') %> 
 <body>
-   
+    <nav>
+        <a href="/players/new">Add New player</a>
+    </nav>
+    <h1>FootBall Players For <%=team.name%></h1>
+    <main>
+        <% teams.forEach(team =>  { %>
+            <section>
+                <a href="/teams/<%=team._id%>">
+                    <img src="<%=team.img%>" alt="<%=team.name%>">
+                </a>
+            </section>
+       <% }) %>
+    </main>
 </body>
 </html>

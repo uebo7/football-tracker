@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const Team = require('../models/team')
+const Player = require('../models/player')
+
+
 
 //index
 
@@ -33,6 +36,12 @@ router.delete('/teams/:id', function(req, res) {
 //update
 
 router.put('/teams/:id', function(req, res) {
+    if(req.body.playoffs === 'on') {
+        req.body.playoffs = true
+    } 
+    else {
+        req.body.playoffs = false
+    }
     Team.findByIdAndUpdate(req.params.id, req.body, 
         {
             new: true,
@@ -45,7 +54,15 @@ router.put('/teams/:id', function(req, res) {
 //create
 
 router.post('/teams', function(req, res) {
+    if(req.body.playoffs === 'on') {
+        req.body.playoffs = true
+    } 
+    else {
+        req.body.playoffs = false
+    }
     Team.create(req.body, function(error, createdteam) {
+        console.log(error)
+        console.log(req.body)
         res.redirect('/teams')
     })
 })
