@@ -7,6 +7,7 @@ const playerSchema = new Schema({
     team: {type: String, required: true},
     touchdowns: {type: Number, required: true},
     position: {type: String, required: true},
+    teamId: {type: String}
 })
 
 module.exports = mongoose.model('player', playerSchema)

@@ -3,21 +3,19 @@
     <%- include('../partials/head') %> 
 <body>
     <nav>
-        <a href="/players">Back to Players</a>
-        <a href="/players/<%=player.id%>/edit">Edit Team</a>
+        <a href="/teams/<%=player.teamId%>">Back to Team</a>
+        <a href="/players/<%=player.id%>/edit">Edit Player</a>
         <form action="/players/<%=player.id%>?_method=DELETE" method="post">
-            <input type="submit" value="DELETE PlAYER">
+            <input type="submit" value="DELETE PLAYER">
         </form>
     </nav>
     <h1><%=player.name%></h1>
     <div>
-        <p>Record: <%=player.number%></p>
+        <p>Jersey Number: <%=player.number%></p>
         <p><%player.team%></p>
-        <p>Conference: <%=player.touchdowns%></p>
-        <p>Division: <%=player.position%></p>
-    </div>
-    <div>
-        <a href="/teams">Teams</a>
+        <p>Touchdowns this Season: <%=player.touchdowns%></p>
+        <p>Position: <%=player.position%></p>
+        <p>teamId: <%=player.teamId%></p>
     </div>
 </body>
 </html>

@@ -26,14 +26,14 @@ router.get('/players/new', function(req, res) {
 
 router.delete('/players/:id', function(req, res) {
     Player.findByIdAndDelete(req.params.id, function(error, deletedPlayer) {
-        res.redirect('/players')
+        res.redirect(`/players/${req.params.id.teamId}`)
     })
 })
 
 //update
 
-router.put('/products/:id', function(req, res) {
-    Player.findByIdAndUpdate(req.params, req.body, 
+router.put('/players/:id', function(req, res) {
+    Player.findByIdAndUpdate(req.params.id, req.body, 
         {
             new: true,
         },
@@ -46,9 +46,7 @@ router.put('/products/:id', function(req, res) {
 
 router.post('/players', function(req, res) {
     Player.create(req.body, function(error, createdPlayer) {
-        console.log(error)
-        console.log(req.body)
-        res.redirect('/players')
+        res.redirect(`/teams/${Player.teamId}`)
     })
 })
 

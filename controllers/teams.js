@@ -2,8 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Team = require('../models/team')
 const Player = require('../models/player')
-
-
+const player = require('../models/player')
 
 //index
 
@@ -61,8 +60,6 @@ router.post('/teams', function(req, res) {
         req.body.playoffs = false
     }
     Team.create(req.body, function(error, createdteam) {
-        console.log(error)
-        console.log(req.body)
         res.redirect('/teams')
     })
 })
@@ -82,11 +79,15 @@ router.get('/teams/:id/edit', function(req,res) {
 
 router.get('/teams/:id', function(req,res) {
     Team.findById(req.params.id, function(err, foundTeam) {
-        res.render('teams/show.ejs', {
-            team: foundTeam,
-            index: req.params.id,
-            title: 'Team Information'
-        })
+        Player.find({teamId: req.params.id}, function(error, foundPlayers) {
+            
+            res.render('teams/show.ejs', {
+                team: foundTeam,
+                index: req.params.id,
+                title: 'Team Information',
+                players: foundPlayers
+            })
+        }) 
     })
 })
 

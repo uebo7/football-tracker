@@ -5,6 +5,7 @@
     <nav>
         <a href="/teams">Back to Teams</a>
         <a href="/teams/<%=team.id%>/edit">Edit Team</a>
+        <a href="/players/new">Add New Player</a>
         <form action="/teams/<%=team.id%>?_method=DELETE" method="post">
             <input type="submit" value="DELETE TEAM">
         </form>
@@ -20,7 +21,13 @@
         <img src="<%=team.img%>" alt="<%=team.name%>">
     </div>
     <div>
-        <a href="/players">Players</a>
+        <aside>
+            <% players.forEach(player =>  { %>
+                <section>
+                    <a href="/players/<%=player._id%>"><%=player.name%></a>
+                </section>
+            <% }) %>
+        </aside>
     </div>
 </body>
 </html>
