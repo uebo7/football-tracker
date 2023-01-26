@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Player = require('../models/player')
+const Team = require('../models/team')
 
 //index
 
@@ -8,7 +9,7 @@ router.get('/players', function(req, res) {
     Player.find({}, function(error, allPlayers) {
         res.render('players/index.ejs', {
             title: 'Players',
-            players: allPlayers
+            players: allPlayers,
         })
     })
 })
@@ -32,20 +33,21 @@ router.delete('/players/:id', function(req, res) {
 //update
 
 router.put('/products/:id', function(req, res) {
-    Player.findByIdAndUpdate(req.params, req,body, 
+    Player.findByIdAndUpdate(req.params, req.body, 
         {
             new: true,
         },
         function(error, updatedPlayer) {
             res.redirect(`${req.params.id}`)
-        }
-        )
+        })
 })
 
 //create
 
 router.post('/players', function(req, res) {
     Player.create(req.body, function(error, createdPlayer) {
+        console.log(error)
+        console.log(req.body)
         res.redirect('/players')
     })
 })

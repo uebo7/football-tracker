@@ -2,6 +2,17 @@
 <html>
     <%- include('../partials/head') %> 
 <body>
-    
+    <nav>
+        <a href="/players">Back to Teams</a>
+    </nav>
+    <h1>Add New Product</h1>
+    <form action="/players" method="post">
+        <input type="text" name="name" placeholder="Player Name">
+        <input type="number" name="number" placeholder="Jersey Number">
+        <input type="text" name="team" placeholder="Team">
+        <input type="number" name="touchdowns" placeholder="Amount of Touchdowns">
+        <input type="text" name="position" placeholder="Position">
+        <input type="submit" value="SUBMIT">
+    </form>
 </body>
 </html>

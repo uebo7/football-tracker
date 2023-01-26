@@ -2,6 +2,26 @@
 <html>
     <%- include('../partials/head') %> 
 <body>
-    
+    <nav>
+        <a href="/players/<%=player._id%>">Back to Player Information</a>
+    </nav>
+    <h1>Edit Player Information</h1>
+    <form action="/players/<%=player.id%>?_method=PUT" method="post">
+        <label>
+            <input type="text" name="name" value="<%=player.name%>">
+        </label>
+        <label>
+            <input type="number" name="number" value="<%=player.number%>">
+        </label>
+        <label>
+            <input type="text" name="team" value="<%=player.team%>">
+        </label>
+        <label>
+            <input type="number" name="touchdowns" value="<%=player.touchdowns%>">
+        </label>
+        <label>
+            <input type="text" name="position" value="<%=player.position%>">
+        </label>
+        <input type="submit" value="UPDATE">
 </body>
 </html>

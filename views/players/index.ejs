@@ -4,14 +4,13 @@
 <body>
     <nav>
         <a href="/players/new">Add New player</a>
+        <a href="/teams">Back to Team</a>
     </nav>
-    <h1>FootBall Players For <%=team.name%></h1>
+    <h1>FootBall Players</h1>
     <main>
-        <% teams.forEach(team =>  { %>
+        <% players.forEach(player =>  { %>
             <section>
-                <a href="/teams/<%=team._id%>">
-                    <img src="<%=team.img%>" alt="<%=team.name%>">
-                </a>
+                <a href="/players/<%=player._id%>"><%=player.name%></a>
             </section>
        <% }) %>
     </main>
