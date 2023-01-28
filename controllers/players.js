@@ -11,7 +11,7 @@ const Team = require('../models/team')
 router.get('/players/new', function(req, res) {
     res.render('players/new.ejs', {
         title: 'Add New Player',
-        teamId: req.params.teamId
+        teamId: req.query.teamId
     })
 })
 

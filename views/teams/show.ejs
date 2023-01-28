@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <%- include('../partials/head') %> 
-<body>
+<body class="show">
     <nav>
         <a href="/teams">Back to Teams</a>
         <a href="/teams/<%=team.id%>/edit">Edit Team</a>
@@ -20,15 +20,14 @@
     <div class="center">
         <img src="<%=team.img%>" alt="<%=team.name%>">
     </div>
-    <div class="aside">
+    
         <aside>
             <% players.forEach(player =>  { %>
-                <section>
+                <section class="space">
                     <a href="/players/<%=player.id%>"><%=player.name%></a>
                 </section>
             <% }) %>
-            <a href="">test</a>
         </aside>
-    </div>
+    
 </body>
 </html>

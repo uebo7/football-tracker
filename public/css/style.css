@@ -52,6 +52,10 @@ img {
 
 /* show */
 
+body.show {
+    display: grid;
+}
+
 div.center {
     text-align: center;
 }
@@ -69,6 +73,11 @@ input.delete {
     height: 40px;
     width: 200px;
     font-size: 20px;
+}
+
+aside {
+    position: absolute;
+    top: 50%;
 }
 
 /* edit / new */
@@ -104,6 +113,10 @@ input.submit {
     width: 200px;
     font-size: 20px;
     margin: 50px;
+}
+
+.space {
+    padding: 20px;
 }
 
 
