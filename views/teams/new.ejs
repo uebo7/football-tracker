@@ -6,14 +6,16 @@
         <a href="/teams">Back to Teams</a>
     </nav>
     <h1>Add New Team</h1>
-    <form action="/teams" method="post">
-        <input type="text" name="name" placeholder="Team Name">
-        <input type="text" name="img" placeholder="Logo Img Link">
-        <input type="text" name="record" placeholder="Team Record">
-        <input type="text" name="conference" placeholder="Team Conference">
-        <input type="text" name="division" placeholder="Team Division">
-        <input type="checkbox" name="playoffs">
-        <input type="submit" value="SUBMIT">
+    <form class="form" action="/teams" method="post">
+        <input class="form" type="text" name="name" placeholder="Team Name">
+        <input class="form" type="text" name="img" placeholder="Logo Img Link">
+        <input class="form" type="text" name="record" placeholder="Team Record">
+        <input class="form" type="text" name="conference" placeholder="Team Conference">
+        <input class="form" type="text" name="division" placeholder="Team Division">
+        <label> Playoffs:
+            <input class="check" type="checkbox" name="playoffs" placeholder="playoffs">
+        </label>
+        <input class="submit" type="submit" value="SUBMIT">
     </form>
 </body>
 </html>

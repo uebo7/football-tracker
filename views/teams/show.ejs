@@ -7,7 +7,7 @@
         <a href="/teams/<%=team.id%>/edit">Edit Team</a>
         <a href="/players/new?teamId=<%=team.id%>">Add New Player</a>
         <form action="/teams/<%=team.id%>?_method=DELETE" method="post">
-            <input type="submit" value="DELETE TEAM">
+            <input class="delete" type="submit" value="DELETE TEAM">
         </form>
     </nav>
     <h1><%=team.name%></h1>
@@ -17,16 +17,17 @@
         <p>Division: <%=team.division%></p>
         <p><%-team.playoffs ? 'In Playoffs' : 'Out Of Playoffs'%></p>
     </div>
-    <div>
+    <div class="center">
         <img src="<%=team.img%>" alt="<%=team.name%>">
     </div>
-    <div>
+    <div class="aside">
         <aside>
             <% players.forEach(player =>  { %>
                 <section>
                     <a href="/players/<%=player.id%>"><%=player.name%></a>
                 </section>
             <% }) %>
+            <a href="">test</a>
         </aside>
     </div>
 </body>

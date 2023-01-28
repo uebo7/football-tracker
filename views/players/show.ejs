@@ -6,7 +6,7 @@
         <a href="/teams/<%=player.teamId%>">Back to Team</a>
         <a href="/players/<%=player.id%>/edit">Edit Player</a>
         <form action="/players/<%=player.id%>?_method=DELETE" method="post">
-            <input type="submit" value="DELETE PLAYER">
+            <input class="delete" type="submit" value="DELETE PLAYER">
         </form>
     </nav>
     <h1><%=player.name%></h1>

@@ -6,14 +6,14 @@
         <a href="/teams/<%=teamId%>">Back to Teams</a>
     </nav>
     <h1>Add New Player</h1>
-    <form action="/players" method="post">
-        <input type="text" name="name" placeholder="Player Name">
-        <input type="number" name="number" placeholder="Jersey Number">
-        <input type="text" name="team" placeholder="Team">
-        <input type="number" name="touchdowns" placeholder="Amount of Touchdowns">
-        <input type="text" name="position" placeholder="Position">
-        <input type="hidden" id="teamId" name="teamId" value="<%=teamId%>">
-        <input type="submit" value="SUBMIT">
+    <form class="form" action="/players" method="post">
+        <input class="form" type="text" name="name" placeholder="Player Name">
+        <input class="form" type="number" name="number" placeholder="Jersey Number">
+        <input class="form" type="text" name="team" placeholder="Team">
+        <input class="form" type="number" name="touchdowns" placeholder="Amount of Touchdowns">
+        <input class="form" type="text" name="position" placeholder="Position">
+        <input class="form" type="hidden" name="teamId" value="<%=teamId%>">
+        <input class="submit" type="submit" value="SUBMIT">
     </form>
 </body>
 </html>

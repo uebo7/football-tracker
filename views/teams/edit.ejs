@@ -6,27 +6,17 @@
         <a href="/teams/<%=team.id%>">Back to Team Information</a>
     </nav>
     <h1>Edit Team Information</h1>
-    <form action="/teams/<%=team.id%>?_method=PUT" method="post">
-        <label>
-            <input type="text" name="name" value="<%=team.name%>">
-        </label>
-        <label>
-            <input type="text" name="img" value="<%=team.img%>">
-        </label>
-        <label>
-            <input type="text" name="record" value="<%=team.record%>">
-        </label>
-        <label>
-            <input type="text" name="conference" value="<%=team.conference%>">
-        </label>
-        <label>
-            <input type="text" name="division" value="<%=team.division%>">
-        </label>
-        <label>
-            <input type="checkbox" name="playoffs"
-            <% if(team.playoffs === true) {%> checked <% } %>>
-        </label>
-        <input type="submit" value="UPDATE">
+    <form class="form" action="/teams/<%=team.id%>?_method=PUT" method="post">
+            <input class="form" type="text" name="name" value="<%=team.name%>">
+            <input class="form" type="text" name="img" value="<%=team.img%>">
+            <input class="form" type="text" name="record" value="<%=team.record%>">
+            <input class="form" type="text" name="conference" value="<%=team.conference%>">
+            <input class="form" type="text" name="division" value="<%=team.division%>">
+            <label>Playoffs:
+                <input class="check" type="checkbox" name="playoffs"
+                <% if(team.playoffs === true) {%> checked <% } %>>
+            </label>
+            <input class="submit" type="submit" value="UPDATE">
     </form>
 </body>
 </html>

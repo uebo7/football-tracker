@@ -6,25 +6,13 @@
         <a href="/teams/<%=player.teamId%>">Back to Player Information</a>
     </nav>
     <h1>Edit Player Information</h1>
-    <form action="/players/<%=player.id%>?_method=PUT" method="post">
-        <label>
-            <input type="text" name="name" value="<%=player.name%>">
-        </label>
-        <label>
-            <input type="number" name="number" value="<%=player.number%>">
-        </label>
-        <label>
-            <input type="text" name="team" value="<%=player.team%>">
-        </label>
-        <label>
-            <input type="number" name="touchdowns" value="<%=player.touchdowns%>">
-        </label>
-        <label>
-            <input type="text" name="position" value="<%=player.position%>">
-        </label>
-        <label>
-            <input type="text" name="teamId" value="<%=player.teamId%>">
-        </label>
-        <input type="submit" value="UPDATE">
+    <form class="form" action="/players/<%=player.id%>?_method=PUT" method="post">
+            <input class="form" type="text" name="name" value="<%=player.name%>">
+            <input class="form" type="number" name="number" value="<%=player.number%>">
+            <input class="form" type="text" name="team" value="<%=player.team%>">
+            <input class="form" type="number" name="touchdowns" value="<%=player.touchdowns%>">
+            <input class="form" type="text" name="position" value="<%=player.position%>">
+            <input class="form" type="hidden" name="teamId" value="<%=teamId%>">
+            <input class="submit" type="submit" value="UPDATE">
 </body>
 </html>
