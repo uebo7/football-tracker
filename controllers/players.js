@@ -5,20 +5,13 @@ const Team = require('../models/team')
 
 //index
 
-router.get('/players', function(req, res) {
-    Player.find({}, function(error, allPlayers) {
-        res.render('players/index.ejs', {
-            title: 'Players',
-            players: allPlayers,
-        })
-    })
-})
 
 //new
 
 router.get('/players/new', function(req, res) {
     res.render('players/new.ejs', {
-        title: 'Add New Player'
+        title: 'Add New Player',
+        teamId: req.params.teamId
     })
 })
 
@@ -26,7 +19,7 @@ router.get('/players/new', function(req, res) {
 
 router.delete('/players/:id', function(req, res) {
     Player.findByIdAndDelete(req.params.id, function(error, deletedPlayer) {
-        res.redirect(`/players/${req.params.id.teamId}`)
+        res.redirect(`/teams/${deletedPlayer.teamId}`)
     })
 })
 
@@ -46,7 +39,7 @@ router.put('/players/:id', function(req, res) {
 
 router.post('/players', function(req, res) {
     Player.create(req.body, function(error, createdPlayer) {
-        res.redirect(`/teams/${Player.teamId}`)
+        res.redirect(`/teams/${createdPlayer.teamId}`)
     })
 })
 

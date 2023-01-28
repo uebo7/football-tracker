@@ -3,7 +3,7 @@
     <%- include('../partials/head') %> 
 <body>
     <nav>
-        <a href="/players/<%=player._id%>">Back to Player Information</a>
+        <a href="/teams/<%=player.teamId%>">Back to Player Information</a>
     </nav>
     <h1>Edit Player Information</h1>
     <form action="/players/<%=player.id%>?_method=PUT" method="post">

@@ -21,6 +21,7 @@ router.get('/teams', function(req, res) {
 router.get('/teams/new', function(req, res) {
     res.render('teams/new.ejs', {
         title: 'Add New Team'
+        
     })
 })
 
@@ -68,6 +69,7 @@ router.post('/teams', function(req, res) {
 
 router.get('/teams/:id/edit', function(req,res) {
     Team.findById(req.params.id, function(error, editTeam) {
+        
         res.render('teams/edit.ejs', {
             team: editTeam,
             title: 'Edit Team'
