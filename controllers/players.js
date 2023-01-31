@@ -49,7 +49,8 @@ router.get('/players/:id/edit', function(req, res) {
     Player.findById(req.params.id, function(error, editPlayer) {
         res.render('players/edit.ejs', {
             title: 'Edit Player',
-            player: editPlayer
+            player: editPlayer,
+            teamId: req.query.teamId
         })
     })
 })
