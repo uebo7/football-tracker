@@ -8,11 +8,13 @@
 - Node.js
 - Express
 ## Images
-![screenshot1](TeamPage.png)
-![screenshot2](TeamInfo.png)
-![screenshot3](PlaterInfo.png)
+![screenshot1](/public/img/TeamPage.png)
+![screenshot2](/public/img/TeamInfo.png)
+![screenshot3](/public/img/PlayerInfo.png)
 ## Test it out
-[Check out the tracker here]()
+[Check out the app here]()
 ## Future Developments
 - Addition of Bye Weeks for each team.
 - Addition of who the teams are up against, beaten, and lost to.
+- Player yds/game and total yds.
+- Team / Player season rank
