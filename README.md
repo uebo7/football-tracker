@@ -12,7 +12,7 @@
 ![screenshot2](/public/img/TeamInfo.png)
 ![screenshot3](/public/img/PlayerInfo.png)
 ## Test it out
-[Check out the app here]()
+[Check out the app here](https://football-tracker20.herokuapp.com/)
 ## Future Developments
 - Addition of Bye Weeks for each team.
 - Addition of who the teams are up against, beaten, and lost to.
