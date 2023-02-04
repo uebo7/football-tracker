@@ -36,6 +36,9 @@ app.use(express.static('public'))
 app.use(logger('dev'))
 
 //routes
+app.get('/', function(req, res) {
+    res.redirect('/teams');
+})
 
 app.use(playersRouter)
 app.use(teamsRouter)
